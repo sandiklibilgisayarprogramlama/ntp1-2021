@@ -1,7 +1,9 @@
 class Daire:
 
     def __init__(self,dairetip,aidat_odedimi,daireno):
-        if dairetip == "3+1":
+        if dairetip == "kapici":
+            self.aidat_ucreti = 0
+        elif dairetip == "3+1":
             self.aidat_ucreti = 100
         else:
             self.aidat_ucreti = 120

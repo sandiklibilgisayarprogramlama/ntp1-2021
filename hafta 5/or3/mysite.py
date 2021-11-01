@@ -17,8 +17,10 @@ class Site:
                 if daire.aidat_odedimi:
                     alinan_aidatlar = alinan_aidatlar+ daire.aidat_ucreti
         
+        kapici_daire_say = self.cesitine_gore_daire_sayisi_dondur("kapici")
+
         print("Gelen Aidat Ücreti")
-        print(alinan_aidatlar)
+        print(alinan_aidatlar - 4000*kapici_daire_say)
     
     def site_toplam_daire_sayisi(self):
         daire_say=0
@@ -38,3 +40,13 @@ class Site:
                     say = say+1
         
         print("sitedeki "+cesit+" tipindeki daire sayisi : "+str(say))
+    
+    def cesitine_gore_daire_sayisi_dondur(self,cesit):
+        say =0
+        for blok in self.blok_listesi:
+            for daire in blok.daire_listesi:
+                if daire.dairetip == cesit:
+                    say = say+1
+        
+        return say
+        
