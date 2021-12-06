@@ -44,5 +44,3 @@ def sozlukleri_birleştir(sozluk1,sozluk2):
         sozluk1[a] = d
     
     return sozluk1
-
-
