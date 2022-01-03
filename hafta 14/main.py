@@ -4,7 +4,6 @@ from filo import Filo
 from petrol_ofis import PetrolOfisi
 from yakit import Yakit
 
-
 benzinli = Yakit("Benzin")
 tuplu = Yakit("Tüp")
 
